@@ -438,14 +438,7 @@ let todoApp
 document.addEventListener("DOMContentLoaded", () => {
   todoApp = new TodoApp()
 
-  // Add some demo tasks if no tasks exist
-  if (todoApp.tasks.length === 0) {
-    const demoTasks = [
-      "Welcome to your Perfect To-Do List! 🎉",
-      "Click on this task to mark it as complete",
-      "Use the search box to find specific tasks",
-      "Try the filter buttons to view different task states",
-    ]
+
 
     demoTasks.forEach((taskText) => {
       todoApp.inputBox.value = taskText
@@ -456,7 +449,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (todoApp.tasks.length > 0) {
       todoApp.toggleTask(todoApp.tasks[0].id)
     }
-  }
+  
 })
 
 // ===== SERVICE WORKER (Optional) =====
